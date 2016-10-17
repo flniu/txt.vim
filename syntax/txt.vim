@@ -21,7 +21,7 @@ syn keyword txtDone   DONE OK
 " ASCII Punctuation Marks
 syn match txtEPM '[~\-_+*<>\[\]{}=|#@$%&\\/:&\^\.,!?'"]'
 " CJK Punctuation Marks
-syn match txtCPM '[，。；：！？、《》【】“”‘’（）『』「」〖〗﹝﹞〔〕〈〉…￥·■◆▲●★□◇△○☆＄‰￥℃※±⑴⑵⑶⑷⑸⑹⑺⑻⑼⑽⑾⑿⒀⒁⒂⒃⒄⒅⒆⒇⒈⒉⒊⒋⒌⒍⒎⒏⒐⒑⒒⒓⒔⒕⒖⒗⒘⒙⒚⒛①②③④⑤⑥⑦⑧⑨⑩㈠㈡㈢㈣㈤㈥㈦㈧㈨㈩→←↑↓§№◎ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩⅪⅫ≈≡≠＝≤≥＜＞≮≯∷±＋－×÷／∫∮∝∞∧∨∑∏∪∩∈∵∴⊥∥∠⌒⊙≌∽√°¤￠〇]'
+syn match txtCPM '[，。；：！？、《》【】“”‘’（）『』「」〖〗﹝﹞〔〕〈〉…·]'
 
 syn match txtNumber '\d\+\(\.\d\+\)\='
 syn match txtLink '\<\w\+://\(\w\|[-+&=,?:./*%#]\)\+'
