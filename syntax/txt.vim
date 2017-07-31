@@ -1,7 +1,7 @@
 " Plain text syntax file
 " Language: text/plain :)
 " Author: Francis Niu (https://github.com/flniu)
-" Last Change: 2016-10-17
+" Last Change: 2017-07-31
 
 scriptencoding utf-8
 
@@ -52,7 +52,7 @@ syn region txtQuoted    matchgroup=txtCPM  start='[‘]'  end='[’]'  contains=
 syn region txtBracketed matchgroup=txtCPM  start='[(（]' end='[）)]' contains=@txtQuotedContains
 
 syn cluster txtQuestionContains contains=txtNumber,txtEPM,txtCPM,txtLink
-syn match txtQuestion '^\S.\+[:?：？][ {]*$' contains=@txtQuestionContains
+syn match txtQuestion '^\S.\+[:：] *{*$' contains=@txtQuestionContains
 
 syn match txtList '^\s*\zs[-+*]\ze [^ ]'
 syn match txtList '^\s*\zs[0-9A-Za-z]\+\.\ze [^ ]'
