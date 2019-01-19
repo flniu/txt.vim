@@ -1,7 +1,7 @@
 " Plain text syntax file
 " Language: text/plain :)
 " Author: Francis Niu (https://github.com/flniu)
-" Last Change: 2017-07-31
+" Last Change: 2019-01-19
 
 scriptencoding utf-8
 
@@ -39,8 +39,8 @@ syn match  txtComment '\s\zs\(#\|\/\/\)\s.*$'      contains=@txtCommentContains
 syn region txtComment start='\/\*' end='\*\/' contains=@txtCommentContains
 
 syn cluster txtQuotedContains contains=txtNumber,txtEPM,txtCPM,txtLink,txtQuoted,txtBracketed
-syn match  txtQuoted    '"[^"]\+"'hs=s+1,he=e-1                      contains=@txtQuotedContains
-syn match  txtQuoted    "\(\w\)\@<!'[^']\+'"hs=s+1,he=e-1            contains=@txtQuotedContains
+syn region txtQuoted    start=+'+ skip=+\\\\\|\\'\|\\$+ excludenl end=+'+ end=+$+ keepend contains=@txtQuotedContains
+syn region txtQuoted    start=+"+ skip=+\\\\\|\\"\|\\$+ excludenl end=+"+ end=+$+ keepend contains=@txtQuotedContains
 syn region txtQuoted    matchgroup=txtCPM  start='[《]'  end='[》]'  contains=@txtQuotedContains
 syn region txtQuoted    matchgroup=txtCPM  start='[“]'  end='[”]'  contains=@txtQuotedContains
 syn region txtQuoted    matchgroup=txtCPM  start='[『]'  end='[』]'  contains=@txtQuotedContains
