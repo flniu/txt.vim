@@ -1,7 +1,7 @@
 " Plain text filetype plugin
 " Language: text/plain :)
 " Author: Francis Niu (https://github.com/flniu)
-" Last Change: 2017-07-31
+" Last Change: 2020-08-07
 
 if exists("b:did_ftplugin")
   finish
@@ -12,7 +12,8 @@ if line('$') >= 1000
   set nonumber
 endif
 set wrap
-set fdm=marker cms=
+set fdm=marker
+set cms=#\ %s
 
 nmap <Leader><Space> A OK<ESC>
 
