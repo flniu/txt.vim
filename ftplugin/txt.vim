@@ -15,6 +15,13 @@ set wrap
 set fdm=marker
 set cms=#\ %s
 
-nmap <Leader><Space> A OK<ESC>
+function ToggleChecklistItem()
+  if match(getline('.'), ' OK$') == -1
+    s/$/ OK/
+  else
+    s/ OK$//
+  endif
+endfunction
+nmap <Leader><Space> :call ToggleChecklistItem()<CR>
 
 " vim:et:ts=2:sw=2:fdm=marker:
